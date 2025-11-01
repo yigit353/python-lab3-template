@@ -1,0 +1,166 @@
+name: Autograding Tests
+
+on:
+  - push
+  - workflow_dispatch
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest
+
+    - name: Exercise 1 - Temperature Converter
+      id: exercise-1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 1 - Temperature Converter
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise1_freezing test_lab3.py::TestLab3::test_exercise1_boiling test_lab3.py::TestLab3::test_exercise1_negative test_lab3.py::TestLab3::test_exercise1_room_temp -v
+        timeout: 10
+        max-score: 2
+
+    - name: Exercise 2 - Dictionary Lookup
+      id: exercise-2
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 2 - Dictionary Lookup
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise2_student_exists test_lab3.py::TestLab3::test_exercise2_student_not_found test_lab3.py::TestLab3::test_exercise2_empty_dict test_lab3.py::TestLab3::test_exercise2_different_student -v
+        timeout: 10
+        max-score: 2
+
+    - name: Exercise 3 - Format Person
+      id: exercise-3
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 3 - Format Person
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise3_basic test_lab3.py::TestLab3::test_exercise3_different_values test_lab3.py::TestLab3::test_exercise3_young_person test_lab3.py::TestLab3::test_exercise3_format_exact -v
+        timeout: 10
+        max-score: 2
+
+    - name: Exercise 4 - Calculate Average
+      id: exercise-4
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 4 - Calculate Average
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise4_basic test_lab3.py::TestLab3::test_exercise4_four_numbers test_lab3.py::TestLab3::test_exercise4_single_number test_lab3.py::TestLab3::test_exercise4_floats -v
+        timeout: 10
+        max-score: 2
+
+    - name: Exercise 5 - Clean Filename
+      id: exercise-5
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 5 - Clean Filename
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise5_with_spaces test_lab3.py::TestLab3::test_exercise5_uppercase test_lab3.py::TestLab3::test_exercise5_mixed_case test_lab3.py::TestLab3::test_exercise5_already_clean -v
+        timeout: 10
+        max-score: 2
+
+    - name: Exercise 6 - Count Extensions
+      id: exercise-6
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 6 - Count Extensions
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise6_basic test_lab3.py::TestLab3::test_exercise6_all_same test_lab3.py::TestLab3::test_exercise6_many_types test_lab3.py::TestLab3::test_exercise6_single_file test_lab3.py::TestLab3::test_exercise6_case_sensitive -v
+        timeout: 10
+        max-score: 3
+
+    - name: Exercise 7 - Filter Passing Students
+      id: exercise-7
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 7 - Filter Passing Students
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise7_basic test_lab3.py::TestLab3::test_exercise7_all_pass test_lab3.py::TestLab3::test_exercise7_none_pass test_lab3.py::TestLab3::test_exercise7_boundary test_lab3.py::TestLab3::test_exercise7_high_scores -v
+        timeout: 10
+        max-score: 3
+
+    - name: Exercise 8 - Analyze Numbers
+      id: exercise-8
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 8 - Analyze Numbers
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise8_basic test_lab3.py::TestLab3::test_exercise8_single_number test_lab3.py::TestLab3::test_exercise8_negative_numbers test_lab3.py::TestLab3::test_exercise8_return_type test_lab3.py::TestLab3::test_exercise8_floats -v
+        timeout: 10
+        max-score: 3
+
+    - name: Exercise 9 - Read Numbers from File
+      id: exercise-9
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 9 - Read Numbers from File
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise9_basic test_lab3.py::TestLab3::test_exercise9_correct_length test_lab3.py::TestLab3::test_exercise9_first_number test_lab3.py::TestLab3::test_exercise9_all_integers test_lab3.py::TestLab3::test_exercise9_sum_check -v
+        timeout: 10
+        max-score: 3
+
+    - name: Exercise 10 - Shopping Cart Total
+      id: exercise-10
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 10 - Shopping Cart Total
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise10_basic test_lab3.py::TestLab3::test_exercise10_single_item test_lab3.py::TestLab3::test_exercise10_multiple_items test_lab3.py::TestLab3::test_exercise10_empty_cart test_lab3.py::TestLab3::test_exercise10_high_quantities -v
+        timeout: 10
+        max-score: 3
+
+    - name: Exercise 11 - Generate Grade Report
+      id: exercise-11
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 11 - Generate Grade Report
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise11_basic_grades test_lab3.py::TestLab3::test_exercise11_all_grade_levels test_lab3.py::TestLab3::test_exercise11_format_check test_lab3.py::TestLab3::test_exercise11_multiple_lines test_lab3.py::TestLab3::test_exercise11_boundary_grades test_lab3.py::TestLab3::test_exercise11_failing_grade -v
+        timeout: 10
+        max-score: 5
+
+    - name: Exercise 12 - Analyze Log File
+      id: exercise-12
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Exercise 12 - Analyze Log File
+        setup-command: ''
+        command: python -m pytest test_lab3.py::TestLab3::test_exercise12_total_lines test_lab3.py::TestLab3::test_exercise12_error_count test_lab3.py::TestLab3::test_exercise12_info_count test_lab3.py::TestLab3::test_exercise12_warning_count test_lab3.py::TestLab3::test_exercise12_structure test_lab3.py::TestLab3::test_exercise12_all_levels_present -v
+        timeout: 10
+        max-score: 5
+
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        EXERCISE-1_RESULTS: "${{steps.exercise-1.outputs.result}}"
+        EXERCISE-2_RESULTS: "${{steps.exercise-2.outputs.result}}"
+        EXERCISE-3_RESULTS: "${{steps.exercise-3.outputs.result}}"
+        EXERCISE-4_RESULTS: "${{steps.exercise-4.outputs.result}}"
+        EXERCISE-5_RESULTS: "${{steps.exercise-5.outputs.result}}"
+        EXERCISE-6_RESULTS: "${{steps.exercise-6.outputs.result}}"
+        EXERCISE-7_RESULTS: "${{steps.exercise-7.outputs.result}}"
+        EXERCISE-8_RESULTS: "${{steps.exercise-8.outputs.result}}"
+        EXERCISE-9_RESULTS: "${{steps.exercise-9.outputs.result}}"
+        EXERCISE-10_RESULTS: "${{steps.exercise-10.outputs.result}}"
+        EXERCISE-11_RESULTS: "${{steps.exercise-11.outputs.result}}"
+        EXERCISE-12_RESULTS: "${{steps.exercise-12.outputs.result}}"
+      with:
+        runners: exercise-1,exercise-2,exercise-3,exercise-4,exercise-5,exercise-6,exercise-7,exercise-8,exercise-9,exercise-10,exercise-11,exercise-12
