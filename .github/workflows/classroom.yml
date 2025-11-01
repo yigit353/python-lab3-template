@@ -35,7 +35,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise1_freezing test_lab3.py::TestLab3::test_exercise1_boiling test_lab3.py::TestLab3::test_exercise1_negative test_lab3.py::TestLab3::test_exercise1_room_temp -v
         timeout: 10
-        max-score: 2
+        max-score: 6
 
     - name: Exercise 2 - Dictionary Lookup
       id: exercise-2
@@ -45,7 +45,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise2_student_exists test_lab3.py::TestLab3::test_exercise2_student_not_found test_lab3.py::TestLab3::test_exercise2_empty_dict test_lab3.py::TestLab3::test_exercise2_different_student -v
         timeout: 10
-        max-score: 2
+        max-score: 6
 
     - name: Exercise 3 - Format Person
       id: exercise-3
@@ -55,7 +55,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise3_basic test_lab3.py::TestLab3::test_exercise3_different_values test_lab3.py::TestLab3::test_exercise3_young_person test_lab3.py::TestLab3::test_exercise3_format_exact -v
         timeout: 10
-        max-score: 2
+        max-score: 6
 
     - name: Exercise 4 - Calculate Average
       id: exercise-4
@@ -65,7 +65,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise4_basic test_lab3.py::TestLab3::test_exercise4_four_numbers test_lab3.py::TestLab3::test_exercise4_single_number test_lab3.py::TestLab3::test_exercise4_floats -v
         timeout: 10
-        max-score: 2
+        max-score: 6
 
     - name: Exercise 5 - Clean Filename
       id: exercise-5
@@ -75,7 +75,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise5_with_spaces test_lab3.py::TestLab3::test_exercise5_uppercase test_lab3.py::TestLab3::test_exercise5_mixed_case test_lab3.py::TestLab3::test_exercise5_already_clean -v
         timeout: 10
-        max-score: 2
+        max-score: 6
 
     - name: Exercise 6 - Count Extensions
       id: exercise-6
@@ -85,7 +85,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise6_basic test_lab3.py::TestLab3::test_exercise6_all_same test_lab3.py::TestLab3::test_exercise6_many_types test_lab3.py::TestLab3::test_exercise6_single_file test_lab3.py::TestLab3::test_exercise6_case_sensitive -v
         timeout: 10
-        max-score: 3
+        max-score: 10
 
     - name: Exercise 7 - Filter Passing Students
       id: exercise-7
@@ -95,7 +95,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise7_basic test_lab3.py::TestLab3::test_exercise7_all_pass test_lab3.py::TestLab3::test_exercise7_none_pass test_lab3.py::TestLab3::test_exercise7_boundary test_lab3.py::TestLab3::test_exercise7_high_scores -v
         timeout: 10
-        max-score: 3
+        max-score: 10
 
     - name: Exercise 8 - Analyze Numbers
       id: exercise-8
@@ -105,7 +105,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise8_basic test_lab3.py::TestLab3::test_exercise8_single_number test_lab3.py::TestLab3::test_exercise8_negative_numbers test_lab3.py::TestLab3::test_exercise8_return_type test_lab3.py::TestLab3::test_exercise8_floats -v
         timeout: 10
-        max-score: 3
+        max-score: 10
 
     - name: Exercise 9 - Read Numbers from File
       id: exercise-9
@@ -115,7 +115,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise9_basic test_lab3.py::TestLab3::test_exercise9_correct_length test_lab3.py::TestLab3::test_exercise9_first_number test_lab3.py::TestLab3::test_exercise9_all_integers test_lab3.py::TestLab3::test_exercise9_sum_check -v
         timeout: 10
-        max-score: 3
+        max-score: 10
 
     - name: Exercise 10 - Shopping Cart Total
       id: exercise-10
@@ -125,7 +125,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise10_basic test_lab3.py::TestLab3::test_exercise10_single_item test_lab3.py::TestLab3::test_exercise10_multiple_items test_lab3.py::TestLab3::test_exercise10_empty_cart test_lab3.py::TestLab3::test_exercise10_high_quantities -v
         timeout: 10
-        max-score: 3
+        max-score: 10
 
     - name: Exercise 11 - Generate Grade Report
       id: exercise-11
@@ -135,7 +135,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise11_basic_grades test_lab3.py::TestLab3::test_exercise11_all_grade_levels test_lab3.py::TestLab3::test_exercise11_format_check test_lab3.py::TestLab3::test_exercise11_multiple_lines test_lab3.py::TestLab3::test_exercise11_boundary_grades test_lab3.py::TestLab3::test_exercise11_failing_grade -v
         timeout: 10
-        max-score: 5
+        max-score: 20
 
     - name: Exercise 12 - Analyze Log File
       id: exercise-12
@@ -145,7 +145,7 @@ jobs:
         setup-command: ''
         command: python -m pytest test_lab3.py::TestLab3::test_exercise12_total_lines test_lab3.py::TestLab3::test_exercise12_error_count test_lab3.py::TestLab3::test_exercise12_info_count test_lab3.py::TestLab3::test_exercise12_warning_count test_lab3.py::TestLab3::test_exercise12_structure test_lab3.py::TestLab3::test_exercise12_all_levels_present -v
         timeout: 10
-        max-score: 5
+        max-score: 20
 
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1

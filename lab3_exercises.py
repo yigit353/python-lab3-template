@@ -23,10 +23,10 @@ def celsius_to_fahrenheit(celsius):
     """
     Convert temperature from Celsius to Fahrenheit.
 
-    Formula: (celsius * 9/5) + 32
+    Formula: Fahrenheit is Celsius x 9/5 + 32
 
     Args:
-        celsius (float): Temperature in Celsius
+        Celsius (float): Temperature in Celsius
 
     Returns:
         float: Temperature in Fahrenheit
@@ -35,10 +35,7 @@ def celsius_to_fahrenheit(celsius):
         celsius_to_fahrenheit(0) returns 32.0
         celsius_to_fahrenheit(100) returns 212.0
     """
-    # TODO: Apply the formula (celsius * 9/5) + 32
-    # TODO: Return the result
-
-    fahrenheit = 0  # Replace this line
+    fahrenheit = 0
 
     return fahrenheit
 
@@ -48,7 +45,7 @@ def celsius_to_fahrenheit(celsius):
 # ==========================================
 def get_student_grade(grades, student_name):
     """
-    Get a student's grade from the grades dictionary.
+    Get a student's grade from the grades' dictionary.
     If student not found, return 0.
 
     Args:
@@ -63,11 +60,9 @@ def get_student_grade(grades, student_name):
         get_student_grade(grades, "Alice") returns 85
         get_student_grade(grades, "Charlie") returns 0
     """
-    # TODO: Use the .get() method on the dictionary
-    # TODO: Provide 0 as the default value if student not found
     # HINT: dictionary.get(key, default_value)
 
-    grade = 0  # Replace this line
+    grade = 0
 
     return grade
 
@@ -93,11 +88,9 @@ def format_person(name, age, city):
         format_person("Alice", 25, "Boston")
         returns "Name: Alice, Age: 25, City: Boston"
     """
-    # TODO: Use an f-string to format the information
-    # TODO: Make sure format matches exactly: "Name: X, Age: Y, City: Z"
-    # HINT: f"Name: {name}, Age: {age}, City: {city}"
+    # HINT: f"{variable}"
 
-    formatted = ""  # Replace this line
+    formatted = ""
 
     return formatted
 
@@ -125,7 +118,6 @@ def format_person(name, age, city):
 # Hints:
 # - Use sum() to add all numbers
 # - Use len() to count numbers
-# - Return sum / length
 
 # TODO: Write the complete calculate_average function here
 
@@ -150,10 +142,8 @@ def format_person(name, age, city):
 # Hints:
 # - Use .strip() to remove whitespace
 # - Use .lower() to convert to lowercase
-# - Chain them together or use separate steps
 
 # TODO: Write the complete clean_filename function here
-
 
 # ==========================================
 # EXERCISE 6: Count File Extensions (3 points)
@@ -173,12 +163,11 @@ def format_person(name, age, city):
 #
 # Hints:
 # - Loop through each filename
-# - Use .split('.')[-1] to get the extension (last part after splitting by dot)
-# - Use a dictionary to count occurrences
-# - Initialize count to 0 if extension not yet in dictionary
+# - Use .split([delimiter]) to split. for example "a-b-c".split("-") returns ['a', 'b', 'c']
+# - Use an empty dictionary to store counts
+# - Initialize count to 0 if extension was not in dictionary
 
 # TODO: Write the complete count_extensions function here
-
 
 # ==========================================
 # EXERCISE 7: Filter Passing Students (3 points)
@@ -194,15 +183,8 @@ def format_person(name, age, city):
 # Example:
 #   filter_passing_students({"Alice": 85, "Bob": 45, "Charlie": 70})
 #   returns {"Alice": 85, "Charlie": 70}
-#
-# Hints:
-# - Create a new empty dictionary
-# - Loop through grades.items() to get both name and score
-# - Check if score >= 60
-# - Add to new dictionary if passing
 
 # TODO: Write the complete filter_passing_students function here
-
 
 # ==========================================
 # EXERCISE 8: Analyze Numbers (3 points)
@@ -218,15 +200,8 @@ def format_person(name, age, city):
 # Example:
 #   analyze_numbers([10, 50, 30, 70])
 #   returns (10, 70, 40.0)
-#
-# Hints:
-# - Use min() to find minimum
-# - Use max() to find maximum
-# - Calculate average as sum() / len()
-# - Return all three values as a tuple: return (min_val, max_val, avg)
 
 # TODO: Write the complete analyze_numbers function here
-
 
 # ==========================================
 # EXERCISE 9: Read Numbers from File (3 points)
@@ -249,10 +224,6 @@ def format_person(name, age, city):
 #
 # Hints:
 # - Use 'with open(filename) as f:' to open the file
-# - Loop through each line in the file
-# - Use .strip() to remove newline characters
-# - Use int() to convert string to integer
-# - Append to a list
 
 # TODO: Write the complete read_numbers_from_file function here
 
@@ -285,8 +256,6 @@ def format_person(name, age, city):
 # Hints:
 # - Loop through cart.items() to get item name and (price, quantity) tuple
 # - Unpack tuple: for item, (price, quantity) in cart.items():
-# - Calculate cost for each item: price * quantity
-# - Sum all costs
 
 # TODO: Write the complete calculate_cart_total function here
 
@@ -319,9 +288,6 @@ def format_person(name, age, city):
 #   "Student: Alice, Score: 92, Grade: A\nStudent: Bob, Score: 78, Grade: C\nStudent: Charlie, Score: 85, Grade: B"
 #
 # Hints:
-# - Create a helper section or use if-elif-else to convert score to letter
-# - Build the report string line by line
-# - Use \n to separate lines
 # - You can use a list and .join() or build string with +=
 
 # TODO: Write the complete generate_grade_report function here
@@ -364,12 +330,7 @@ def format_person(name, age, city):
 #   }
 #
 # Hints:
-# - Initialize result dictionary with total_lines and levels sub-dictionary
-# - Initialize level counts (ERROR, WARNING, INFO) to 0
-# - Open and read file line by line
 # - Split each line by ": " to separate level and message
-# - Use .strip() to clean lines
-# - Increment appropriate counter
 # - Some levels might not appear in file - keep count at 0
 
 # TODO: Write the complete analyze_log_file function here
