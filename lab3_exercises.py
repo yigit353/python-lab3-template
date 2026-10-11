@@ -12,12 +12,12 @@
 # ==========================================
 
 # ==========================================
-# SECTION A: FUNCTIONS WITH GUIDANCE (6 points)
+# SECTION A: FUNCTIONS WITH GUIDANCE (18 points)
 # Function skeleton provided - fill in the body
 # ==========================================
 
 # ==========================================
-# EXERCISE 1: Temperature Converter (2 points)
+# EXERCISE 1: Temperature Converter (6 points)
 # ==========================================
 def celsius_to_fahrenheit(celsius):
     """
@@ -41,7 +41,7 @@ def celsius_to_fahrenheit(celsius):
 
 
 # ==========================================
-# EXERCISE 2: Dictionary Lookup with Default (2 points)
+# EXERCISE 2: Dictionary Lookup with Default (6 points)
 # ==========================================
 def get_student_grade(grades, student_name):
     """
@@ -68,7 +68,7 @@ def get_student_grade(grades, student_name):
 
 
 # ==========================================
-# EXERCISE 3: Format Person Information (2 points)
+# EXERCISE 3: Format Person Information (6 points)
 # ==========================================
 def format_person(name, age, city):
     """
@@ -96,12 +96,12 @@ def format_person(name, age, city):
 
 
 # ==========================================
-# SECTION B: WRITE COMPLETE FUNCTIONS (16 points)
+# SECTION B: WRITE COMPLETE FUNCTIONS (52 points)
 # Write the entire function from scratch
 # ==========================================
 
 # ==========================================
-# EXERCISE 4: Calculate Average (2 points)
+# EXERCISE 4: Calculate Average (6 points)
 # ==========================================
 # Write a function called 'calculate_average' that:
 # - Takes a list of numbers as parameter
@@ -123,7 +123,7 @@ def format_person(name, age, city):
 
 
 # ==========================================
-# EXERCISE 5: Clean Filename (2 points)
+# EXERCISE 5: Clean Filename (6 points)
 # ==========================================
 # Write a function called 'clean_filename' that:
 # - Takes a filename string as parameter
@@ -146,7 +146,7 @@ def format_person(name, age, city):
 # TODO: Write the complete clean_filename function here
 
 # ==========================================
-# EXERCISE 6: Count File Extensions (3 points)
+# EXERCISE 6: Count File Extensions (10 points)
 # ==========================================
 # Write a function called 'count_extensions' that:
 # - Takes a list of filenames
@@ -170,7 +170,7 @@ def format_person(name, age, city):
 # TODO: Write the complete count_extensions function here
 
 # ==========================================
-# EXERCISE 7: Filter Passing Students (3 points)
+# EXERCISE 7: Filter Passing Students (10 points)
 # ==========================================
 # Write a function called 'filter_passing_students' that:
 # - Takes a dictionary of student names and their scores
@@ -187,7 +187,7 @@ def format_person(name, age, city):
 # TODO: Write the complete filter_passing_students function here
 
 # ==========================================
-# EXERCISE 8: Analyze Numbers (3 points)
+# EXERCISE 8: Analyze Numbers (10 points)
 # ==========================================
 # Write a function called 'analyze_numbers' that:
 # - Takes a list of numbers
@@ -204,7 +204,7 @@ def format_person(name, age, city):
 # TODO: Write the complete analyze_numbers function here
 
 # ==========================================
-# EXERCISE 9: Read Numbers from File (3 points)
+# EXERCISE 9: Read Numbers from File (10 points)
 # ==========================================
 # Write a function called 'read_numbers_from_file' that:
 # - Takes a filename as parameter
@@ -229,12 +229,12 @@ def format_person(name, age, city):
 
 
 # ==========================================
-# SECTION C: ADVANCED INTEGRATION (13 points)
+# SECTION C: ADVANCED INTEGRATION (50 points)
 # Complex functions combining multiple concepts
 # ==========================================
 
 # ==========================================
-# EXERCISE 10: Shopping Cart Total (3 points)
+# EXERCISE 10: Shopping Cart Total (10 points)
 # ==========================================
 # Write a function called 'calculate_cart_total' that:
 # - Takes a shopping cart dictionary
@@ -261,7 +261,7 @@ def format_person(name, age, city):
 
 
 # ==========================================
-# EXERCISE 11: Generate Grade Report (5 points)
+# EXERCISE 11: Generate Grade Report (20 points)
 # ==========================================
 # Write a function called 'generate_grade_report' that:
 # - Takes a dictionary of student names and their numeric scores
@@ -294,7 +294,7 @@ def format_person(name, age, city):
 
 
 # ==========================================
-# EXERCISE 12: Analyze Log File (5 points)
+# EXERCISE 12: Analyze Log File (20 points)
 # ==========================================
 # Write a function called 'analyze_log_file' that:
 # - Reads a log file where each line is formatted as "LEVEL: message"
