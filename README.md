@@ -4,7 +4,7 @@
 Master Python functions, dictionaries, and data structures! This lab introduces writing reusable code, working with key-value data, and building complete programs from scratch.
 
 **Time Limit:** 100 minutes  
-**Total Points:** 35 (from autograding)
+**Total Points:** 120 (from autograding)
 
 ## 📋 Instructions
 
@@ -48,22 +48,22 @@ git push
 
 | Exercise | Topic | Points | Type |
 |----------|-------|--------|------|
-| **Section A: Functions with Guidance** | | **6** | **Skeleton** |
-| 1 | Temperature Converter | 2 | Skeleton |
-| 2 | Dictionary Lookup | 2 | Skeleton |
-| 3 | Format Person Info | 2 | Skeleton |
-| **Section B: Write Complete Functions** | | **16** | **From Scratch** |
-| 4 | Calculate Average | 2 | From Scratch |
-| 5 | Clean Filename | 2 | From Scratch |
-| 6 | Count File Extensions | 3 | From Scratch |
-| 7 | Filter Passing Students | 3 | From Scratch |
-| 8 | Analyze Numbers (Tuple) | 3 | From Scratch |
-| 9 | Read Numbers from File | 3 | From Scratch |
-| **Section C: Advanced Integration** | | **13** | **From Scratch** |
-| 10 | Shopping Cart Total | 3 | From Scratch |
-| 11 | Generate Grade Report | 5 | From Scratch |
-| 12 | Analyze Log File | 5 | From Scratch |
-| **TOTAL** | | **35** | |
+| **Section A: Functions with Guidance** | | **18** | **Skeleton** |
+| 1 | Temperature Converter | 6 | Skeleton |
+| 2 | Dictionary Lookup | 6 | Skeleton |
+| 3 | Format Person Info | 6 | Skeleton |
+| **Section B: Write Complete Functions** | | **52** | **From Scratch** |
+| 4 | Calculate Average | 6 | From Scratch |
+| 5 | Clean Filename | 6 | From Scratch |
+| 6 | Count File Extensions | 10 | From Scratch |
+| 7 | Filter Passing Students | 10 | From Scratch |
+| 8 | Analyze Numbers (Tuple) | 10 | From Scratch |
+| 9 | Read Numbers from File | 10 | From Scratch |
+| **Section C: Advanced Integration** | | **50** | **From Scratch** |
+| 10 | Shopping Cart Total | 10 | From Scratch |
+| 11 | Generate Grade Report | 20 | From Scratch |
+| 12 | Analyze Log File | 20 | From Scratch |
+| **TOTAL** | | **120** | |
 
 ## 🔑 Key Concepts
 
@@ -471,13 +471,13 @@ Review your Week 3 lecture slides for:
 Your grade is automatically calculated based on passed tests:
 - Each exercise has multiple test cases
 - Partial credit is awarded for partially correct solutions
-- Final score = (Passed Tests / Total Tests) × 100
+- Final score = earned points out of 120
 
 **Score Breakdown:**
-- Section A (Skeleton): 6 points
-- Section B (Complete): 16 points
-- Section C (Advanced): 13 points
-- **Total: 35 points**
+- Section A (Skeleton): 18 points
+- Section B (Complete): 52 points
+- Section C (Advanced): 50 points
+- **Total: 120 points**
 
 ## ❓ Need Help?
 
